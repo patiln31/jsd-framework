@@ -23,6 +23,7 @@ services:
       - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
       - SE_NODE_MAX_INSTANCES=2
       - SE_NODE_MAX_SESSIONS=2
+      - SE_VNC_NO_PASSWORD=1
     scale: 1
 
   edge:
@@ -37,4 +38,5 @@ services:
       - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
       - SE_NODE_MAX_INSTANCES=2
       - SE_NODE_MAX_SESSIONS=2
+      - SE_VNC_NO_PASSWORD=1
     scale: 1
