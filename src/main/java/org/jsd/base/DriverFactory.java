@@ -9,6 +9,7 @@ import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.jsd.utils.ConfigReader;
 import java.net.URL;
 
 public class DriverFactory {
@@ -24,9 +25,12 @@ public class DriverFactory {
 
     private static WebDriver createDriver(String browserType) {
         WebDriver driver;
-        String gridUrl = System.getProperty("grid.url");
         
-        if (gridUrl != null) {
+        // Check if remote execution is enabled
+        boolean isRemote = Boolean.parseBoolean(ConfigReader.get("remote", "false"));
+        String gridUrl = System.getProperty("grid.url", ConfigReader.get("grid.url"));
+        
+        if (isRemote && gridUrl != null) {
             // Remote execution on Grid
             driver = createRemoteDriver(browserType, gridUrl);
         } else {

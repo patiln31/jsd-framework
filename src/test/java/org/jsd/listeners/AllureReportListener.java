@@ -5,7 +5,6 @@ import org.testng.ISuite;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import java.io.IOException;
-import java.io.ObjectInputFilter.Config;
 import java.awt.Desktop;
 import java.net.URI;
 import java.util.concurrent.TimeUnit;
@@ -37,22 +36,16 @@ public class AllureReportListener implements ISuiteListener {
     private void generateAllureReport() throws IOException, InterruptedException {
         log.info("Starting Allure server (will auto-stop in 10 seconds)...");
         
-        // Start Allure server
-        ProcessBuilder pb = new ProcessBuilder("cmd", "/c", "start", "allure", "serve", ALLURE_RESULTS_PATH);
-        pb.start();
+        // Clean only old report directory, keep allure-results
+        ProcessBuilder cleanBuilder = new ProcessBuilder();
+        cleanBuilder.command("cmd", "/c", "if exist allure-report rmdir /s /q allure-report");
+        cleanBuilder.start().waitFor(3, TimeUnit.SECONDS);
         
-        // Schedule termination after 10 seconds
-        new Thread(() -> {
-            try {
-                Thread.sleep(10000);
-                Runtime.getRuntime().exec("taskkill /f /im java.exe /fi \"COMMANDLINE eq *allure*\"");
-                log.info("Allure server terminated after 10 seconds");
-            } catch (Exception e) {
-                log.error("Failed to terminate Allure server", e);
-            }
-        }).start();
+        ProcessBuilder processBuilder = new ProcessBuilder();
+        processBuilder.command("cmd", "/c", "start", "cmd", "/c", "allure serve " + ALLURE_RESULTS_PATH + " & timeout /t 10 /nobreak >nul & taskkill /f /im cmd.exe /fi \"WINDOWTITLE eq *allure*\"");
         
-        log.info("Allure server started with 10-second auto-terminate");
+        Process process = processBuilder.start();
+        log.info("Allure server started with fresh report generation");
     }
     
     private void openAllureReport() {

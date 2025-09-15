@@ -1,2 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Mon Sep 15 14:51:30 IST 2025","Mon Sep 15 14:51:32 IST 2025","1814","Parallel Browser Suite","Chrome Test","org.jsd.tests.LoginTest","org.jsd.tests.LoginTest","testValidLogin","testValidLogin","Verify user can login with valid credentials"

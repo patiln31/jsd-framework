@@ -7,6 +7,7 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.jsd.utils.ConfigReader;
 
 public class BaseTest {
     protected WebDriver driver;
@@ -17,7 +18,7 @@ public class BaseTest {
     public void setUp(@Optional("chrome") String browser) {
         try {
             driver = DriverFactory.getDriver(browser);
-            driver.get("https://www.saucedemo.com/v1/");
+            driver.get(ConfigReader.get("base.url"));
             log.info("Driver initialized successfully for browser: {}", browser);
         } catch (Exception e) {
             log.error("Failed to initialize driver for browser: {}", browser, e);

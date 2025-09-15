@@ -4,7 +4,6 @@ import io.qameta.allure.*;
 import org.jsd.base.BaseTest;
 import org.jsd.pages.LoginPage;
 import org.testng.annotations.Test;
-import org.testng.annotations.Optional;
 import static org.testng.Assert.*;
 
 @Epic("Authentication")
@@ -15,9 +14,9 @@ public class LoginTest extends BaseTest {
     @Story("User Authentication")
     @Severity(SeverityLevel.BLOCKER)
     @Description("Verify user can login with valid credentials")
-    public void testValidLogin(@Optional("chrome") String browser) {
-        Allure.parameter("Browser", browser);
+    public void testValidLogin() throws InterruptedException {
         LoginPage loginPage = new LoginPage(driver);
+        Thread.sleep(10000);
         loginPage.enterUsername("standard_user")
                 .enterPassword("secret_sauce")
                 .clickLogin();

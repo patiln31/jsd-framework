@@ -10,5 +10,11 @@ timeout /t 10 /nobreak >nul
 echo Running tests on Grid...
 mvn clean test -DsuiteXmlFile=testng.xml -Dgrid.url=http://localhost:4444
 
+if %ERRORLEVEL% EQU 0 (
+    echo Tests completed successfully!
+) else (
+    echo Tests failed!
+)
+
 echo Stopping Grid...
 docker-compose down

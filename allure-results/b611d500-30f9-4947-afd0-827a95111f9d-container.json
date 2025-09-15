@@ -1,1 +1,0 @@
-{"uuid":"b611d500-30f9-4947-afd0-827a95111f9d","name":"org.jsd.base.BaseTest.setUp","children":["510f2ab5-c804-490f-b456-3c5f4586c64a"],"description":"","befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1757926176952,"stop":1757926181751}],"afters":[],"start":1757926176951,"stop":1757926181751}

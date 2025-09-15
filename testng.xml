@@ -15,9 +15,9 @@
         </classes>
     </test>
     
-    <!-- Chrome Test 2 -->
-    <test name="Chrome Test 2">
-        <parameter name="browser" value="chrome"/>
+    <!-- Edge Test -->
+    <test name="Edge Test">
+        <parameter name="browser" value="edge"/>
         <classes>
             <class name="org.jsd.tests.LoginTest"/>
         </classes>
