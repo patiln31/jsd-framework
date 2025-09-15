@@ -1,0 +1,28 @@
+package org.jsd.tests;
+
+import io.qameta.allure.*;
+import org.jsd.base.BaseTest;
+import org.jsd.pages.LoginPage;
+import org.testng.annotations.Test;
+import org.testng.annotations.Optional;
+import static org.testng.Assert.*;
+
+@Epic("Authentication")
+@Feature("Login")
+public class LoginTest extends BaseTest {
+
+    @Test
+    @Story("User Authentication")
+    @Severity(SeverityLevel.BLOCKER)
+    @Description("Verify user can login with valid credentials")
+    public void testValidLogin(@Optional("chrome") String browser) {
+        Allure.parameter("Browser", browser);
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.enterUsername("standard_user")
+                .enterPassword("secret_sauce")
+                .clickLogin();
+
+        assertTrue(driver.getCurrentUrl().contains("/inventory.html"),
+            "User should be redirected to inventory page after login");
+    }
+}
