@@ -36,16 +36,11 @@ public class AllureReportListener implements ISuiteListener {
     private void generateAllureReport() throws IOException, InterruptedException {
         log.info("Starting Allure server (will auto-stop in 10 seconds)...");
         
-        // Clean only old report directory, keep allure-results
-        ProcessBuilder cleanBuilder = new ProcessBuilder();
-        cleanBuilder.command("cmd", "/c", "if exist allure-report rmdir /s /q allure-report");
-        cleanBuilder.start().waitFor(3, TimeUnit.SECONDS);
-        
         ProcessBuilder processBuilder = new ProcessBuilder();
         processBuilder.command("cmd", "/c", "start", "cmd", "/c", "allure serve " + ALLURE_RESULTS_PATH + " & timeout /t 10 /nobreak >nul & taskkill /f /im cmd.exe /fi \"WINDOWTITLE eq *allure*\"");
         
         Process process = processBuilder.start();
-        log.info("Allure server started with fresh report generation");
+        log.info("Allure server started");
     }
     
     private void openAllureReport() {

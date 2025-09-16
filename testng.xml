@@ -4,6 +4,7 @@
     
     <!-- Listeners -->
     <listeners>
+        <listener class-name="org.jsd.listeners.TestCleanupListener"/>
         <listener class-name="org.jsd.listeners.AllureReportListener"/>
     </listeners>
     
