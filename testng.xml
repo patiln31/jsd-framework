@@ -5,6 +5,8 @@
     <!-- Listeners -->
     <listeners>
         <listener class-name="org.jsd.listeners.TestCleanupListener"/>
+        <listener class-name="org.jsd.listeners.EnvironmentListener"/>
+        <listener class-name="org.jsd.listeners.ScreenshotListener"/>
         <listener class-name="org.jsd.listeners.AllureReportListener"/>
     </listeners>
     
@@ -13,6 +15,7 @@
         <parameter name="browser" value="chrome"/>
         <classes>
             <class name="org.jsd.tests.LoginTest"/>
+            <class name="org.jsd.tests.LoginDataDrivenTest"/>
         </classes>
     </test>
     
@@ -21,6 +24,7 @@
         <parameter name="browser" value="edge"/>
         <classes>
             <class name="org.jsd.tests.LoginTest"/>
+            <class name="org.jsd.tests.LoginDataDrivenTest"/>
         </classes>
     </test>
 

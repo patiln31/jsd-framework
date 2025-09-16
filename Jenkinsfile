@@ -24,7 +24,7 @@ pipeline {
         
         stage('Run Tests') {
             steps {
-                bat 'mvn clean test -DsuiteXmlFile=testng.xml -Dgrid.url=http://localhost:4444'
+                bat 'mvn clean test -DsuiteXmlFile=testng.xml -Dgrid.url=http://localhost:4444 -Dexecution.env=Jenkins'
             }
         }
         

@@ -10,6 +10,7 @@ public class LoginPage extends BasePage {
     private final By usernameField = By.id("user-name");
     private final By passwordField = By.id("password");
     private final By loginButton = By.id("login-button");
+    private final By errorMessage = By.cssSelector("[data-test='error']");
 
     public LoginPage(WebDriver driver) {
         super(driver);
@@ -37,5 +38,15 @@ public class LoginPage extends BasePage {
         enterUsername(username)
             .enterPassword(password)
             .clickLogin();
+    }
+    
+    @Step("Check if error message is displayed")
+    public boolean isErrorMessageDisplayed() {
+        return isElementDisplayed(errorMessage);
+    }
+    
+    @Step("Get error message text")
+    public String getErrorMessage() {
+        return getText(errorMessage);
     }
 }
