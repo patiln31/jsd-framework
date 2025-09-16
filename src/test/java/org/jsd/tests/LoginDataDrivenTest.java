@@ -4,6 +4,7 @@ import io.qameta.allure.*;
 import org.jsd.base.BaseTest;
 import org.jsd.pages.LoginPage;
 import org.jsd.utils.CSVReader;
+import org.jsd.utils.CommonActions;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import static org.testng.Assert.*;
@@ -24,6 +25,7 @@ public class LoginDataDrivenTest extends BaseTest {
     @Description("Verify login functionality with different user credentials from Excel data")
     public void testLoginWithMultipleUsers(String username, String password, String expected) {
         LoginPage loginPage = new LoginPage(driver);
+        CommonActions actions = new CommonActions(driver);
         
         Allure.parameter("Username", username);
         Allure.parameter("Password", password);
@@ -35,8 +37,7 @@ public class LoginDataDrivenTest extends BaseTest {
 
         switch (expected.toLowerCase()) {
             case "success" -> {
-                assertTrue(driver.getCurrentUrl().contains("/inventory.html"),
-                    "User should be redirected to inventory page after successful login");
+                actions.verifyUrlContains("/inventory.html");
                 Allure.step("Login successful - redirected to inventory page");
             }
             case "locked" -> {
@@ -55,8 +56,7 @@ public class LoginDataDrivenTest extends BaseTest {
                 Allure.step("Login blocked - user account is locked (INTENTIONAL FAILURE FOR SCREENSHOT TEST)");
             }
             case "error" -> {
-                assertTrue(loginPage.isErrorMessageDisplayed(),
-                    "Error message should be displayed for invalid credentials");
+                actions.verifyElementDisplayed(org.openqa.selenium.By.cssSelector("[data-test='error']"));
                 Allure.step("Login failed - invalid credentials");
             }
         }

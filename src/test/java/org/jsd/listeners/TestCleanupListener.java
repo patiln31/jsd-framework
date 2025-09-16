@@ -42,6 +42,26 @@ public class TestCleanupListener implements ISuiteListener {
                 log.info("Cleaned allure-report directory");
             }
             
+            // Clean screenshots directory
+            Path screenshotsDir = Paths.get(System.getProperty("user.dir"), "test-output", "screenshots");
+            if (Files.exists(screenshotsDir)) {
+                Files.walk(screenshotsDir)
+                    .sorted(Comparator.reverseOrder())
+                    .map(Path::toFile)
+                    .forEach(File::delete);
+                log.info("Cleaned screenshots directory");
+            }
+            
+            // Clean email reports directory
+            Path emailReportsDir = Paths.get(System.getProperty("user.dir"), "test-output", "email-reports");
+            if (Files.exists(emailReportsDir)) {
+                Files.walk(emailReportsDir)
+                    .sorted(Comparator.reverseOrder())
+                    .map(Path::toFile)
+                    .forEach(File::delete);
+                log.info("Cleaned email-reports directory");
+            }
+            
         } catch (IOException e) {
             log.warn("Failed to clean old results: {}", e.getMessage());
         }

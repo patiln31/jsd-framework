@@ -78,6 +78,13 @@
       <artifactId>poi-ooxml</artifactId>
       <version>5.2.4</version>
     </dependency>
+
+    <!-- JavaMail for Email -->
+    <dependency>
+      <groupId>com.sun.mail</groupId>
+      <artifactId>javax.mail</artifactId>
+      <version>1.6.2</version>
+    </dependency>
   </dependencies>
 
   <build>

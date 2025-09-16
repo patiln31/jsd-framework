@@ -11,7 +11,7 @@ public class LoginPage extends BasePage {
     private final By passwordField = By.id("password");
     private final By loginButton = By.id("login-button");
     private final By errorMessage = By.cssSelector("[data-test='error']");
-
+    
     public LoginPage(WebDriver driver) {
         super(driver);
     }

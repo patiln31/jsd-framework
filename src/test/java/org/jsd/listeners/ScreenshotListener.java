@@ -18,9 +18,35 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.Base64;
+import java.util.List;
 
 public class ScreenshotListener implements ITestListener {
     private static final Logger log = LogManager.getLogger(ScreenshotListener.class);
+    private static final List<FailedTestScreenshot> failedScreenshots = new ArrayList<>();
+    
+    public static class FailedTestScreenshot {
+        public String testName;
+        public String base64Screenshot;
+        public String timestamp;
+        public String filePath;
+        
+        public FailedTestScreenshot(String testName, String base64Screenshot, String timestamp, String filePath) {
+            this.testName = testName;
+            this.base64Screenshot = base64Screenshot;
+            this.timestamp = timestamp;
+            this.filePath = filePath;
+        }
+    }
+    
+    public static List<FailedTestScreenshot> getFailedScreenshots() {
+        return new ArrayList<>(failedScreenshots);
+    }
+    
+    public static void clearFailedScreenshots() {
+        failedScreenshots.clear();
+    }
 
     @Override
     public void onTestFailure(ITestResult result) {
@@ -34,8 +60,13 @@ public class ScreenshotListener implements ITestListener {
                 Allure.addAttachment("Screenshot on Failure", "image/png", 
                     new ByteArrayInputStream(screenshot), "png");
                 
-                // Also save to file system with dynamic path
-                saveScreenshotToFile(screenshot, result.getMethod().getMethodName());
+                // Save screenshot info for email
+                String base64Screenshot = Base64.getEncoder().encodeToString(screenshot);
+                String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss"));
+                String filePath = saveScreenshotToFile(screenshot, result.getMethod().getMethodName());
+                
+                failedScreenshots.add(new FailedTestScreenshot(
+                    result.getMethod().getMethodName(), base64Screenshot, timestamp, filePath));
                 
                 log.info("Screenshot captured and attached to Allure report for failed test: {}", 
                     result.getMethod().getMethodName());
@@ -45,7 +76,7 @@ public class ScreenshotListener implements ITestListener {
         }
     }
     
-    private void saveScreenshotToFile(byte[] screenshot, String testName) {
+    private String saveScreenshotToFile(byte[] screenshot, String testName) {
         try {
             // Create dynamic screenshot directory
             String userDir = System.getProperty("user.dir");
@@ -65,8 +96,11 @@ public class ScreenshotListener implements ITestListener {
             Files.write(screenshotPath, screenshot);
             log.info("Screenshot saved to: {}", screenshotPath.toString());
             
+            return screenshotPath.toString();
+            
         } catch (IOException e) {
             log.error("Failed to save screenshot to file: {}", e.getMessage());
+            return null;
         }
     }
 }
