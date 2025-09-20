@@ -131,50 +131,17 @@ public class AllureReportListener implements ISuiteListener, ITestListener {
     private void generateAllureReport() throws IOException, InterruptedException {
         log.info("Generating Allure report...");
         
-        // Wait a moment for all results to be written
+        // Wait for all results to be written
         Thread.sleep(2000);
         
-        try {
-            // Generate static report first
-            ProcessBuilder generateBuilder = new ProcessBuilder();
-            generateBuilder.command("cmd", "/c", "allure", "generate", ALLURE_RESULTS_PATH, "-o", "allure-report", "--clean");
-            generateBuilder.redirectErrorStream(true);
-            Process generateProcess = generateBuilder.start();
-            int exitCode = generateProcess.waitFor();
-            
-            if (exitCode == 0) {
-                // Get absolute path to report
-                String reportPath = System.getProperty("user.dir") + "\\allure-report\\index.html";
-                log.info("Opening report at: {}", reportPath);
-                
-                // Open the static report in browser
-                ProcessBuilder openBuilder = new ProcessBuilder();
-                openBuilder.command("cmd", "/c", "start", "", reportPath);
-                openBuilder.start();
-                
-                log.info("Static Allure report generated and opened successfully");
-            } else {
-                log.error("Failed to generate Allure report. Exit code: {}", exitCode);
-                // Fallback to allure serve
-                fallbackToServe();
-            }
-        } catch (Exception e) {
-            log.error("Error generating static report, falling back to serve", e);
-            fallbackToServe();
-        }
+        // Use allure serve - works reliably in all environments
+        ProcessBuilder serveBuilder = new ProcessBuilder();
+        serveBuilder.command("cmd", "/c", "allure", "serve", ALLURE_RESULTS_PATH);
+        serveBuilder.start();
+        
+        log.info("Allure serve started - report will open in browser");
     }
-    
-    private void fallbackToServe() {
-        try {
-            log.info("Using fallback: allure serve");
-            ProcessBuilder serveBuilder = new ProcessBuilder();
-            serveBuilder.command("cmd", "/c", "start", "cmd", "/c", "allure serve " + ALLURE_RESULTS_PATH);
-            serveBuilder.start();
-            log.info("Allure serve started as fallback");
-        } catch (Exception e) {
-            log.error("Failed to start allure serve fallback", e);
-        }
-    }
+
     
     private void openAllureReport() {
         // No need to open manually - allure serve opens automatically

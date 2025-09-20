@@ -28,3 +28,520 @@
 2025-09-20 15:40:42.847 [main] INFO  org.jsd.listeners.AllureReportListener - Generating Allure report...
 2025-09-20 15:40:44.874 [main] INFO  org.jsd.listeners.AllureReportListener - Allure report served and opened
 2025-09-20 15:40:49.822 [main] INFO  org.jsd.utils.EmailSender - Simple email sent successfully to: patiln31@gmail.com,nileshjsd@yopmail.com
+2025-09-20 17:27:25.584 [main] INFO  org.jsd.listeners.TestCleanupListener - Cleaning old test results before starting suite: Parallel Browser Suite
+2025-09-20 17:27:25.647 [main] INFO  org.jsd.listeners.TestCleanupListener - Cleaned allure-results directory for fresh reports
+2025-09-20 17:27:25.648 [main] INFO  org.jsd.listeners.TestCleanupListener - Cleaned screenshots directory
+2025-09-20 17:27:25.812 [TestNG-tests-1] INFO  org.jsd.utils.ConfigReader - Configuration loaded successfully from: /E:/Work/jsd-framework/target/test-classes/configs/config.properties
+2025-09-20 17:27:27.342 [TestNG-tests-1] ERROR org.jsd.base.BaseTest - Failed to initialize driver for browser: chrome
+java.lang.RuntimeException: Failed to create remote driver
+	at org.jsd.base.DriverFactory.createRemoteDriver(DriverFactory.java:55) ~[classes/:?]
+	at org.jsd.base.DriverFactory.createDriver(DriverFactory.java:35) ~[classes/:?]
+	at org.jsd.base.DriverFactory.getDriver(DriverFactory.java:20) ~[classes/:?]
+	at org.jsd.base.BaseTest.setUp(BaseTest.java:50) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128) ~[testng-7.8.0.jar:7.8.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:848) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.TestRunner.run(TestRunner.java:621) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58) ~[testng-7.8.0.jar:7.8.0]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'NILES-PC', ip: '192.168.0.101'
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}]}]
+Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:625) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:241) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:168) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:148) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.jsd.base.DriverFactory.createRemoteDriver(DriverFactory.java:49) ~[classes/:?]
+	... 27 more
+Caused by: java.io.UncheckedIOException: java.net.ConnectException
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:450) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42) ~[selenium-http-4.15.0.jar:?]
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55) ~[selenium-http-4.15.0.jar:?]
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:366) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.tracing.TracedHttpClient.execute(TracedHttpClient.java:54) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:115) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:96) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:68) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:241) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:168) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:148) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.jsd.base.DriverFactory.createRemoteDriver(DriverFactory.java:49) ~[classes/:?]
+	... 27 more
+Caused by: java.net.ConnectException
+	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1041) ~[java.net.http:?]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:227) ~[java.net.http:?]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.checkRetryConnect(PlainHttpConnection.java:280) ~[java.net.http:?]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$2(PlainHttpConnection.java:238) ~[java.net.http:?]
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773) ~[?:?]
+	... 3 more
+Caused by: java.nio.channels.ClosedChannelException
+	at java.base/sun.nio.ch.SocketChannelImpl.ensureOpen(SocketChannelImpl.java:202) ~[?:?]
+	at java.base/sun.nio.ch.SocketChannelImpl.beginConnect(SocketChannelImpl.java:786) ~[?:?]
+	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:874) ~[?:?]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$1(PlainHttpConnection.java:210) ~[java.net.http:?]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571) ~[?:?]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:212) ~[java.net.http:?]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.checkRetryConnect(PlainHttpConnection.java:280) ~[java.net.http:?]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$2(PlainHttpConnection.java:238) ~[java.net.http:?]
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773) ~[?:?]
+	... 3 more
+2025-09-20 17:27:27.342 [TestNG-tests-2] ERROR org.jsd.base.BaseTest - Failed to initialize driver for browser: edge
+java.lang.RuntimeException: Failed to create remote driver
+	at org.jsd.base.DriverFactory.createRemoteDriver(DriverFactory.java:55) ~[classes/:?]
+	at org.jsd.base.DriverFactory.createDriver(DriverFactory.java:35) ~[classes/:?]
+	at org.jsd.base.DriverFactory.getDriver(DriverFactory.java:20) ~[classes/:?]
+	at org.jsd.base.BaseTest.setUp(BaseTest.java:50) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128) ~[testng-7.8.0.jar:7.8.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:848) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.TestRunner.run(TestRunner.java:621) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58) ~[testng-7.8.0.jar:7.8.0]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'NILES-PC', ip: '192.168.0.101'
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [], extensions: []}}]}]
+Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [], extensions: []}}
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:625) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:241) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:168) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:148) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.jsd.base.DriverFactory.createRemoteDriver(DriverFactory.java:50) ~[classes/:?]
+	... 27 more
+Caused by: java.io.UncheckedIOException: java.net.ConnectException
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:450) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42) ~[selenium-http-4.15.0.jar:?]
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55) ~[selenium-http-4.15.0.jar:?]
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:366) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.tracing.TracedHttpClient.execute(TracedHttpClient.java:54) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:115) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:96) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:68) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:241) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:168) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:148) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.jsd.base.DriverFactory.createRemoteDriver(DriverFactory.java:50) ~[classes/:?]
+	... 27 more
+Caused by: java.net.ConnectException
+	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1041) ~[java.net.http:?]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:227) ~[java.net.http:?]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.checkRetryConnect(PlainHttpConnection.java:280) ~[java.net.http:?]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$2(PlainHttpConnection.java:238) ~[java.net.http:?]
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773) ~[?:?]
+	... 3 more
+Caused by: java.nio.channels.ClosedChannelException
+	at java.base/sun.nio.ch.SocketChannelImpl.ensureOpen(SocketChannelImpl.java:202) ~[?:?]
+	at java.base/sun.nio.ch.SocketChannelImpl.beginConnect(SocketChannelImpl.java:786) ~[?:?]
+	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:874) ~[?:?]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$1(PlainHttpConnection.java:210) ~[java.net.http:?]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571) ~[?:?]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:212) ~[java.net.http:?]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.checkRetryConnect(PlainHttpConnection.java:280) ~[java.net.http:?]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$2(PlainHttpConnection.java:238) ~[java.net.http:?]
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773) ~[?:?]
+	... 3 more
+2025-09-20 17:27:27.609 [TestNG-tests-1] INFO  org.jsd.listeners.EnvironmentListener - Test started on OS: Windows 11 | Java: 21.0.5 | Environment: Local
+2025-09-20 17:27:27.609 [TestNG-tests-2] INFO  org.jsd.listeners.EnvironmentListener - Test started on OS: Windows 11 | Java: 21.0.5 | Environment: Local
+2025-09-20 17:27:27.614 [TestNG-tests-1] INFO  org.jsd.listeners.AllureReportListener - Test skipped: testValidLogin, capturing screenshot...
+2025-09-20 17:27:27.614 [TestNG-tests-2] INFO  org.jsd.listeners.AllureReportListener - Test skipped: testValidLogin, capturing screenshot...
+2025-09-20 17:27:27.615 [TestNG-tests-2] WARN  org.jsd.listeners.AllureReportListener - WebDriver is null, cannot capture screenshot for test: testValidLogin
+2025-09-20 17:27:27.615 [TestNG-tests-1] WARN  org.jsd.listeners.AllureReportListener - WebDriver is null, cannot capture screenshot for test: testValidLogin
+2025-09-20 17:27:27.628 [TestNG-tests-1] INFO  org.jsd.utils.CSVReader - Successfully read 4 rows from CSV file: /E:/Work/jsd-framework/target/test-classes/testdata/login_data.csv
+2025-09-20 17:27:27.628 [TestNG-tests-2] INFO  org.jsd.utils.CSVReader - Successfully read 4 rows from CSV file: /E:/Work/jsd-framework/target/test-classes/testdata/login_data.csv
+2025-09-20 17:27:27.648 [TestNG-tests-1] ERROR org.jsd.base.BaseTest - Failed to initialize driver for browser: chrome
+java.lang.RuntimeException: Failed to create remote driver
+	at org.jsd.base.DriverFactory.createRemoteDriver(DriverFactory.java:55) ~[classes/:?]
+	at org.jsd.base.DriverFactory.createDriver(DriverFactory.java:35) ~[classes/:?]
+	at org.jsd.base.DriverFactory.getDriver(DriverFactory.java:20) ~[classes/:?]
+	at org.jsd.base.BaseTest.setUp(BaseTest.java:50) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128) ~[testng-7.8.0.jar:7.8.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:848) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.TestRunner.run(TestRunner.java:621) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58) ~[testng-7.8.0.jar:7.8.0]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'NILES-PC', ip: '192.168.0.101'
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}]}]
+Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:625) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:241) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:168) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:148) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.jsd.base.DriverFactory.createRemoteDriver(DriverFactory.java:49) ~[classes/:?]
+	... 27 more
+Caused by: java.io.UncheckedIOException: java.net.ConnectException
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:450) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42) ~[selenium-http-4.15.0.jar:?]
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55) ~[selenium-http-4.15.0.jar:?]
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:366) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.tracing.TracedHttpClient.execute(TracedHttpClient.java:54) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:115) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:96) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:68) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:241) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:168) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:148) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.jsd.base.DriverFactory.createRemoteDriver(DriverFactory.java:49) ~[classes/:?]
+	... 27 more
+Caused by: java.net.ConnectException
+	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1041) ~[java.net.http:?]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:227) ~[java.net.http:?]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.checkRetryConnect(PlainHttpConnection.java:280) ~[java.net.http:?]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$2(PlainHttpConnection.java:238) ~[java.net.http:?]
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773) ~[?:?]
+	... 3 more
+Caused by: java.nio.channels.ClosedChannelException
+	at java.base/sun.nio.ch.SocketChannelImpl.ensureOpen(SocketChannelImpl.java:202) ~[?:?]
+	at java.base/sun.nio.ch.SocketChannelImpl.beginConnect(SocketChannelImpl.java:786) ~[?:?]
+	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:874) ~[?:?]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$1(PlainHttpConnection.java:210) ~[java.net.http:?]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571) ~[?:?]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:212) ~[java.net.http:?]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.checkRetryConnect(PlainHttpConnection.java:280) ~[java.net.http:?]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$2(PlainHttpConnection.java:238) ~[java.net.http:?]
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773) ~[?:?]
+	... 3 more
+2025-09-20 17:27:27.648 [TestNG-tests-2] ERROR org.jsd.base.BaseTest - Failed to initialize driver for browser: edge
+java.lang.RuntimeException: Failed to create remote driver
+	at org.jsd.base.DriverFactory.createRemoteDriver(DriverFactory.java:55) ~[classes/:?]
+	at org.jsd.base.DriverFactory.createDriver(DriverFactory.java:35) ~[classes/:?]
+	at org.jsd.base.DriverFactory.getDriver(DriverFactory.java:20) ~[classes/:?]
+	at org.jsd.base.BaseTest.setUp(BaseTest.java:50) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128) ~[testng-7.8.0.jar:7.8.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:848) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.TestRunner.run(TestRunner.java:621) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481) ~[testng-7.8.0.jar:7.8.0]
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58) ~[testng-7.8.0.jar:7.8.0]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'NILES-PC', ip: '192.168.0.101'
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [], extensions: []}}]}]
+Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [], extensions: []}}
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:625) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:241) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:168) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:148) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.jsd.base.DriverFactory.createRemoteDriver(DriverFactory.java:50) ~[classes/:?]
+	... 27 more
+Caused by: java.io.UncheckedIOException: java.net.ConnectException
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:450) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42) ~[selenium-http-4.15.0.jar:?]
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55) ~[selenium-http-4.15.0.jar:?]
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:366) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.tracing.TracedHttpClient.execute(TracedHttpClient.java:54) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:115) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:96) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:68) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:241) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:168) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:148) ~[selenium-remote-driver-4.15.0.jar:?]
+	at org.jsd.base.DriverFactory.createRemoteDriver(DriverFactory.java:50) ~[classes/:?]
+	... 27 more
+Caused by: java.net.ConnectException
+	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1041) ~[java.net.http:?]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:227) ~[java.net.http:?]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.checkRetryConnect(PlainHttpConnection.java:280) ~[java.net.http:?]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$2(PlainHttpConnection.java:238) ~[java.net.http:?]
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773) ~[?:?]
+	... 3 more
+Caused by: java.nio.channels.ClosedChannelException
+	at java.base/sun.nio.ch.SocketChannelImpl.ensureOpen(SocketChannelImpl.java:202) ~[?:?]
+	at java.base/sun.nio.ch.SocketChannelImpl.beginConnect(SocketChannelImpl.java:786) ~[?:?]
+	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:874) ~[?:?]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$1(PlainHttpConnection.java:210) ~[java.net.http:?]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571) ~[?:?]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:212) ~[java.net.http:?]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.checkRetryConnect(PlainHttpConnection.java:280) ~[java.net.http:?]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$2(PlainHttpConnection.java:238) ~[java.net.http:?]
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773) ~[?:?]
+	... 3 more
+2025-09-20 17:27:27.665 [TestNG-tests-2] INFO  org.jsd.listeners.EnvironmentListener - Test started on OS: Windows 11 | Java: 21.0.5 | Environment: Local
+2025-09-20 17:27:27.666 [TestNG-tests-1] INFO  org.jsd.listeners.EnvironmentListener - Test started on OS: Windows 11 | Java: 21.0.5 | Environment: Local
+2025-09-20 17:27:27.668 [TestNG-tests-2] INFO  org.jsd.listeners.AllureReportListener - Test skipped: testLoginWithMultipleUsers, capturing screenshot...
+2025-09-20 17:27:27.668 [TestNG-tests-2] WARN  org.jsd.listeners.AllureReportListener - WebDriver is null, cannot capture screenshot for test: testLoginWithMultipleUsers
+2025-09-20 17:27:27.671 [TestNG-tests-1] INFO  org.jsd.listeners.AllureReportListener - Test skipped: testLoginWithMultipleUsers, capturing screenshot...
+2025-09-20 17:27:27.672 [TestNG-tests-1] WARN  org.jsd.listeners.AllureReportListener - WebDriver is null, cannot capture screenshot for test: testLoginWithMultipleUsers
+2025-09-20 17:27:27.679 [TestNG-tests-2] INFO  org.jsd.listeners.EnvironmentListener - Test started on OS: Windows 11 | Java: 21.0.5 | Environment: Local
+2025-09-20 17:27:27.683 [TestNG-tests-2] INFO  org.jsd.listeners.AllureReportListener - Test skipped: testLoginWithMultipleUsers, capturing screenshot...
+2025-09-20 17:27:27.683 [TestNG-tests-2] WARN  org.jsd.listeners.AllureReportListener - WebDriver is null, cannot capture screenshot for test: testLoginWithMultipleUsers
+2025-09-20 17:27:27.683 [TestNG-tests-1] INFO  org.jsd.listeners.EnvironmentListener - Test started on OS: Windows 11 | Java: 21.0.5 | Environment: Local
+2025-09-20 17:27:27.688 [TestNG-tests-1] INFO  org.jsd.listeners.AllureReportListener - Test skipped: testLoginWithMultipleUsers, capturing screenshot...
+2025-09-20 17:27:27.688 [TestNG-tests-1] WARN  org.jsd.listeners.AllureReportListener - WebDriver is null, cannot capture screenshot for test: testLoginWithMultipleUsers
+2025-09-20 17:27:27.695 [TestNG-tests-2] INFO  org.jsd.listeners.EnvironmentListener - Test started on OS: Windows 11 | Java: 21.0.5 | Environment: Local
+2025-09-20 17:27:27.698 [TestNG-tests-1] INFO  org.jsd.listeners.EnvironmentListener - Test started on OS: Windows 11 | Java: 21.0.5 | Environment: Local
+2025-09-20 17:27:27.699 [TestNG-tests-2] INFO  org.jsd.listeners.AllureReportListener - Test skipped: testLoginWithMultipleUsers, capturing screenshot...
+2025-09-20 17:27:27.700 [TestNG-tests-2] WARN  org.jsd.listeners.AllureReportListener - WebDriver is null, cannot capture screenshot for test: testLoginWithMultipleUsers
+2025-09-20 17:27:27.709 [TestNG-tests-2] INFO  org.jsd.listeners.EnvironmentListener - Test started on OS: Windows 11 | Java: 21.0.5 | Environment: Local
+2025-09-20 17:27:27.711 [TestNG-tests-1] INFO  org.jsd.listeners.AllureReportListener - Test skipped: testLoginWithMultipleUsers, capturing screenshot...
+2025-09-20 17:27:27.711 [TestNG-tests-1] WARN  org.jsd.listeners.AllureReportListener - WebDriver is null, cannot capture screenshot for test: testLoginWithMultipleUsers
+2025-09-20 17:27:27.716 [TestNG-tests-2] INFO  org.jsd.listeners.AllureReportListener - Test skipped: testLoginWithMultipleUsers, capturing screenshot...
+2025-09-20 17:27:27.716 [TestNG-tests-2] WARN  org.jsd.listeners.AllureReportListener - WebDriver is null, cannot capture screenshot for test: testLoginWithMultipleUsers
+2025-09-20 17:27:27.723 [TestNG-tests-1] INFO  org.jsd.listeners.EnvironmentListener - Test started on OS: Windows 11 | Java: 21.0.5 | Environment: Local
+2025-09-20 17:27:27.740 [TestNG-tests-1] INFO  org.jsd.listeners.AllureReportListener - Test skipped: testLoginWithMultipleUsers, capturing screenshot...
+2025-09-20 17:27:27.741 [TestNG-tests-1] WARN  org.jsd.listeners.AllureReportListener - WebDriver is null, cannot capture screenshot for test: testLoginWithMultipleUsers
+2025-09-20 17:27:27.756 [main] INFO  org.jsd.listeners.AllureReportListener - Test suite 'Parallel Browser Suite' finished. Generating Allure report...
+2025-09-20 17:27:27.757 [main] INFO  org.jsd.listeners.AllureReportListener - Generating Allure report...
+2025-09-20 17:27:33.238 [main] INFO  org.jsd.listeners.AllureReportListener - Opening report at: E:\Work\jsd-framework\allure-report\index.html
+2025-09-20 17:27:33.249 [main] INFO  org.jsd.listeners.AllureReportListener - Static Allure report generated and opened successfully
+2025-09-20 17:27:37.763 [main] INFO  org.jsd.utils.EmailSender - Simple email sent successfully to: patiln31@gmail.com,nileshjsd@yopmail.com
+2025-09-20 17:29:09.407 [main] INFO  org.jsd.listeners.TestCleanupListener - Cleaning old test results before starting suite: Parallel Browser Suite
+2025-09-20 17:29:09.453 [main] INFO  org.jsd.listeners.TestCleanupListener - Cleaned allure-results directory for fresh reports
+2025-09-20 17:29:09.489 [main] INFO  org.jsd.listeners.TestCleanupListener - Cleaned allure-report directory
+2025-09-20 17:29:09.711 [TestNG-tests-2] INFO  org.jsd.utils.ConfigReader - Configuration loaded successfully from: /E:/Work/jsd-framework/target/test-classes/configs/config.properties
+2025-09-20 17:29:16.385 [TestNG-tests-1] INFO  org.jsd.base.BaseTest - Driver initialized successfully for browser: chrome
+2025-09-20 17:29:16.572 [TestNG-tests-2] INFO  org.jsd.base.BaseTest - Driver initialized successfully for browser: edge
+2025-09-20 17:29:16.638 [TestNG-tests-2] INFO  org.jsd.listeners.EnvironmentListener - Test started on OS: Windows 11 | Java: 21.0.5 | Environment: Local
+2025-09-20 17:29:16.638 [TestNG-tests-1] INFO  org.jsd.listeners.EnvironmentListener - Test started on OS: Windows 11 | Java: 21.0.5 | Environment: Local
+2025-09-20 17:29:29.378 [TestNG-tests-2] INFO  org.jsd.base.BaseTest - Driver closed successfully
+2025-09-20 17:29:29.609 [TestNG-tests-2] INFO  org.jsd.utils.CSVReader - Successfully read 4 rows from CSV file: /E:/Work/jsd-framework/target/test-classes/testdata/login_data.csv
+2025-09-20 17:29:29.864 [TestNG-tests-1] INFO  org.jsd.base.BaseTest - Driver closed successfully
+2025-09-20 17:29:29.868 [TestNG-tests-1] INFO  org.jsd.utils.CSVReader - Successfully read 4 rows from CSV file: /E:/Work/jsd-framework/target/test-classes/testdata/login_data.csv
+2025-09-20 17:29:31.080 [TestNG-tests-1] INFO  org.jsd.base.BaseTest - Driver initialized successfully for browser: chrome
+2025-09-20 17:29:31.088 [TestNG-tests-1] INFO  org.jsd.listeners.EnvironmentListener - Test started on OS: Windows 11 | Java: 21.0.5 | Environment: Local
+2025-09-20 17:29:31.120 [TestNG-tests-2] INFO  org.jsd.base.BaseTest - Driver initialized successfully for browser: edge
+2025-09-20 17:29:31.126 [TestNG-tests-2] INFO  org.jsd.listeners.EnvironmentListener - Test started on OS: Windows 11 | Java: 21.0.5 | Environment: Local
+2025-09-20 17:29:32.666 [TestNG-tests-1] INFO  org.jsd.utils.CommonActions - URL verified: https://www.saucedemo.com/v1/inventory.html
+2025-09-20 17:29:32.825 [TestNG-tests-1] INFO  org.jsd.base.BaseTest - Driver closed successfully
+2025-09-20 17:29:33.037 [TestNG-tests-2] INFO  org.jsd.utils.CommonActions - URL verified: https://www.saucedemo.com/v1/inventory.html
+2025-09-20 17:29:33.220 [TestNG-tests-2] INFO  org.jsd.base.BaseTest - Driver closed successfully
+2025-09-20 17:29:34.167 [TestNG-tests-1] INFO  org.jsd.base.BaseTest - Driver initialized successfully for browser: chrome
+2025-09-20 17:29:34.173 [TestNG-tests-1] INFO  org.jsd.listeners.EnvironmentListener - Test started on OS: Windows 11 | Java: 21.0.5 | Environment: Local
+2025-09-20 17:29:34.982 [TestNG-tests-2] INFO  org.jsd.base.BaseTest - Driver initialized successfully for browser: edge
+2025-09-20 17:29:35.603 [TestNG-tests-2] INFO  org.jsd.listeners.EnvironmentListener - Test started on OS: Windows 11 | Java: 21.0.5 | Environment: Local
+2025-09-20 17:29:35.750 [TestNG-tests-1] INFO  org.jsd.listeners.AllureReportListener - Test failed: testLoginWithMultipleUsers, capturing screenshot...
+2025-09-20 17:29:35.902 [TestNG-tests-1] ERROR io.qameta.allure.AllureLifecycle - Could not add attachment: no test is running
+2025-09-20 17:29:35.905 [TestNG-tests-1] INFO  org.jsd.listeners.AllureReportListener - Screenshot captured and attached to Allure report
+2025-09-20 17:29:36.064 [TestNG-tests-1] INFO  org.jsd.base.BaseTest - Driver closed successfully
+2025-09-20 17:29:37.180 [TestNG-tests-2] INFO  org.jsd.listeners.AllureReportListener - Test failed: testLoginWithMultipleUsers, capturing screenshot...
+2025-09-20 17:29:37.358 [TestNG-tests-2] ERROR io.qameta.allure.AllureLifecycle - Could not add attachment: no test is running
+2025-09-20 17:29:37.369 [TestNG-tests-2] INFO  org.jsd.listeners.AllureReportListener - Screenshot captured and attached to Allure report
+2025-09-20 17:29:37.494 [TestNG-tests-1] INFO  org.jsd.base.BaseTest - Driver initialized successfully for browser: chrome
+2025-09-20 17:29:37.503 [TestNG-tests-1] INFO  org.jsd.listeners.EnvironmentListener - Test started on OS: Windows 11 | Java: 21.0.5 | Environment: Local
+2025-09-20 17:29:37.546 [TestNG-tests-2] INFO  org.jsd.base.BaseTest - Driver closed successfully
+2025-09-20 17:29:39.107 [TestNG-tests-1] INFO  org.jsd.utils.CommonActions - URL verified: https://www.saucedemo.com/v1/inventory.html
+2025-09-20 17:29:39.280 [TestNG-tests-1] INFO  org.jsd.base.BaseTest - Driver closed successfully
+2025-09-20 17:29:39.404 [TestNG-tests-2] INFO  org.jsd.base.BaseTest - Driver initialized successfully for browser: edge
+2025-09-20 17:29:39.411 [TestNG-tests-2] INFO  org.jsd.listeners.EnvironmentListener - Test started on OS: Windows 11 | Java: 21.0.5 | Environment: Local
+2025-09-20 17:29:40.721 [TestNG-tests-2] INFO  org.jsd.utils.CommonActions - URL verified: https://www.saucedemo.com/v1/inventory.html
+2025-09-20 17:29:40.837 [TestNG-tests-2] INFO  org.jsd.base.BaseTest - Driver closed successfully
+2025-09-20 17:29:40.880 [TestNG-tests-1] INFO  org.jsd.base.BaseTest - Driver initialized successfully for browser: chrome
+2025-09-20 17:29:40.888 [TestNG-tests-1] INFO  org.jsd.listeners.EnvironmentListener - Test started on OS: Windows 11 | Java: 21.0.5 | Environment: Local
+2025-09-20 17:29:41.815 [TestNG-tests-1] INFO  org.jsd.utils.CommonActions - Element is displayed: By.cssSelector: [data-test='error']
+2025-09-20 17:29:41.970 [TestNG-tests-1] INFO  org.jsd.base.BaseTest - Driver closed successfully
+2025-09-20 17:29:42.359 [TestNG-tests-2] INFO  org.jsd.base.BaseTest - Driver initialized successfully for browser: edge
+2025-09-20 17:29:42.366 [TestNG-tests-2] INFO  org.jsd.listeners.EnvironmentListener - Test started on OS: Windows 11 | Java: 21.0.5 | Environment: Local
+2025-09-20 17:29:43.164 [TestNG-tests-2] INFO  org.jsd.utils.CommonActions - Element is displayed: By.cssSelector: [data-test='error']
+2025-09-20 17:29:43.383 [TestNG-tests-2] INFO  org.jsd.base.BaseTest - Driver closed successfully
+2025-09-20 17:29:43.391 [main] INFO  org.jsd.listeners.AllureReportListener - Test suite 'Parallel Browser Suite' finished. Generating Allure report...
+2025-09-20 17:29:43.391 [main] INFO  org.jsd.listeners.AllureReportListener - Generating Allure report...
+2025-09-20 17:29:48.971 [main] INFO  org.jsd.listeners.AllureReportListener - Opening report at: E:\Work\jsd-framework\allure-report\index.html
+2025-09-20 17:29:48.984 [main] INFO  org.jsd.listeners.AllureReportListener - Static Allure report generated and opened successfully
+2025-09-20 17:29:53.762 [main] INFO  org.jsd.utils.EmailSender - Simple email sent successfully to: patiln31@gmail.com,nileshjsd@yopmail.com
+2025-09-20 17:32:33.632 [main] INFO  org.jsd.listeners.TestCleanupListener - Cleaning old test results before starting suite: Parallel Browser Suite
+2025-09-20 17:32:33.661 [main] INFO  org.jsd.listeners.TestCleanupListener - Cleaned allure-results directory for fresh reports
+2025-09-20 17:32:33.687 [main] INFO  org.jsd.listeners.TestCleanupListener - Cleaned allure-report directory
+2025-09-20 17:32:33.689 [main] INFO  org.jsd.listeners.TestCleanupListener - Cleaned screenshots directory
+2025-09-20 17:32:33.851 [TestNG-tests-2] INFO  org.jsd.utils.ConfigReader - Configuration loaded successfully from: /E:/Work/jsd-framework/target/test-classes/configs/config.properties
+2025-09-20 17:32:36.758 [TestNG-tests-1] INFO  org.jsd.base.BaseTest - Driver initialized successfully for browser: chrome
+2025-09-20 17:32:36.815 [TestNG-tests-2] INFO  org.jsd.base.BaseTest - Driver initialized successfully for browser: edge
+2025-09-20 17:32:36.977 [TestNG-tests-1] INFO  org.jsd.listeners.EnvironmentListener - Test started on OS: Windows 11 | Java: 21.0.5 | Environment: Local
+2025-09-20 17:32:36.977 [TestNG-tests-2] INFO  org.jsd.listeners.EnvironmentListener - Test started on OS: Windows 11 | Java: 21.0.5 | Environment: Local
+2025-09-20 17:32:48.651 [TestNG-tests-1] INFO  org.jsd.base.BaseTest - Driver closed successfully
+2025-09-20 17:32:48.664 [TestNG-tests-1] INFO  org.jsd.utils.CSVReader - Successfully read 4 rows from CSV file: /E:/Work/jsd-framework/target/test-classes/testdata/login_data.csv
+2025-09-20 17:32:48.787 [TestNG-tests-2] INFO  org.jsd.base.BaseTest - Driver closed successfully
+2025-09-20 17:32:48.790 [TestNG-tests-2] INFO  org.jsd.utils.CSVReader - Successfully read 4 rows from CSV file: /E:/Work/jsd-framework/target/test-classes/testdata/login_data.csv
+2025-09-20 17:32:49.950 [TestNG-tests-1] INFO  org.jsd.base.BaseTest - Driver initialized successfully for browser: chrome
+2025-09-20 17:32:49.959 [TestNG-tests-1] INFO  org.jsd.listeners.EnvironmentListener - Test started on OS: Windows 11 | Java: 21.0.5 | Environment: Local
+2025-09-20 17:32:50.505 [TestNG-tests-2] INFO  org.jsd.base.BaseTest - Driver initialized successfully for browser: edge
+2025-09-20 17:32:50.512 [TestNG-tests-2] INFO  org.jsd.listeners.EnvironmentListener - Test started on OS: Windows 11 | Java: 21.0.5 | Environment: Local
+2025-09-20 17:32:51.506 [TestNG-tests-1] INFO  org.jsd.utils.CommonActions - URL verified: https://www.saucedemo.com/v1/inventory.html
+2025-09-20 17:32:51.661 [TestNG-tests-1] INFO  org.jsd.base.BaseTest - Driver closed successfully
+2025-09-20 17:32:52.211 [TestNG-tests-2] INFO  org.jsd.utils.CommonActions - URL verified: https://www.saucedemo.com/v1/inventory.html
+2025-09-20 17:32:52.450 [TestNG-tests-2] INFO  org.jsd.base.BaseTest - Driver closed successfully
+2025-09-20 17:32:53.311 [TestNG-tests-1] INFO  org.jsd.base.BaseTest - Driver initialized successfully for browser: chrome
+2025-09-20 17:32:53.318 [TestNG-tests-1] INFO  org.jsd.listeners.EnvironmentListener - Test started on OS: Windows 11 | Java: 21.0.5 | Environment: Local
+2025-09-20 17:32:54.655 [TestNG-tests-2] INFO  org.jsd.base.BaseTest - Driver initialized successfully for browser: edge
+2025-09-20 17:32:54.667 [TestNG-tests-2] INFO  org.jsd.listeners.EnvironmentListener - Test started on OS: Windows 11 | Java: 21.0.5 | Environment: Local
+2025-09-20 17:32:55.360 [TestNG-tests-1] INFO  org.jsd.listeners.AllureReportListener - Test failed: testLoginWithMultipleUsers, capturing screenshot...
+2025-09-20 17:32:55.590 [TestNG-tests-1] ERROR io.qameta.allure.AllureLifecycle - Could not add attachment: no test is running
+2025-09-20 17:32:55.592 [TestNG-tests-1] INFO  org.jsd.listeners.AllureReportListener - Screenshot captured and attached to Allure report
+2025-09-20 17:32:55.765 [TestNG-tests-1] INFO  org.jsd.base.BaseTest - Driver closed successfully
+2025-09-20 17:32:56.358 [TestNG-tests-2] INFO  org.jsd.listeners.AllureReportListener - Test failed: testLoginWithMultipleUsers, capturing screenshot...
+2025-09-20 17:32:56.538 [TestNG-tests-2] ERROR io.qameta.allure.AllureLifecycle - Could not add attachment: no test is running
+2025-09-20 17:32:56.540 [TestNG-tests-2] INFO  org.jsd.listeners.AllureReportListener - Screenshot captured and attached to Allure report
+2025-09-20 17:32:56.696 [TestNG-tests-2] INFO  org.jsd.base.BaseTest - Driver closed successfully
+2025-09-20 17:32:56.955 [TestNG-tests-1] INFO  org.jsd.base.BaseTest - Driver initialized successfully for browser: chrome
+2025-09-20 17:32:56.961 [TestNG-tests-1] INFO  org.jsd.listeners.EnvironmentListener - Test started on OS: Windows 11 | Java: 21.0.5 | Environment: Local
+2025-09-20 17:32:58.124 [TestNG-tests-1] INFO  org.jsd.utils.CommonActions - URL verified: https://www.saucedemo.com/v1/inventory.html
+2025-09-20 17:32:58.275 [TestNG-tests-1] INFO  org.jsd.base.BaseTest - Driver closed successfully
+2025-09-20 17:32:58.477 [TestNG-tests-2] INFO  org.jsd.base.BaseTest - Driver initialized successfully for browser: edge
+2025-09-20 17:32:58.482 [TestNG-tests-2] INFO  org.jsd.listeners.EnvironmentListener - Test started on OS: Windows 11 | Java: 21.0.5 | Environment: Local
+2025-09-20 17:32:59.673 [TestNG-tests-2] INFO  org.jsd.utils.CommonActions - URL verified: https://www.saucedemo.com/v1/inventory.html
+2025-09-20 17:32:59.782 [TestNG-tests-1] INFO  org.jsd.base.BaseTest - Driver initialized successfully for browser: chrome
+2025-09-20 17:32:59.788 [TestNG-tests-1] INFO  org.jsd.listeners.EnvironmentListener - Test started on OS: Windows 11 | Java: 21.0.5 | Environment: Local
+2025-09-20 17:32:59.839 [TestNG-tests-2] INFO  org.jsd.base.BaseTest - Driver closed successfully
+2025-09-20 17:33:00.752 [TestNG-tests-1] INFO  org.jsd.utils.CommonActions - Element is displayed: By.cssSelector: [data-test='error']
+2025-09-20 17:33:00.893 [TestNG-tests-1] INFO  org.jsd.base.BaseTest - Driver closed successfully
+2025-09-20 17:33:01.391 [TestNG-tests-2] INFO  org.jsd.base.BaseTest - Driver initialized successfully for browser: edge
+2025-09-20 17:33:01.397 [TestNG-tests-2] INFO  org.jsd.listeners.EnvironmentListener - Test started on OS: Windows 11 | Java: 21.0.5 | Environment: Local
+2025-09-20 17:33:02.262 [TestNG-tests-2] INFO  org.jsd.utils.CommonActions - Element is displayed: By.cssSelector: [data-test='error']
+2025-09-20 17:33:02.368 [TestNG-tests-2] INFO  org.jsd.base.BaseTest - Driver closed successfully
+2025-09-20 17:33:02.376 [main] INFO  org.jsd.listeners.AllureReportListener - Test suite 'Parallel Browser Suite' finished. Generating Allure report...
+2025-09-20 17:33:02.376 [main] INFO  org.jsd.listeners.AllureReportListener - Generating Allure report...
+2025-09-20 17:33:05.376 [main] INFO  org.jsd.listeners.AllureReportListener - Executing: allure generate allure-results -o allure-report --clean
+2025-09-20 17:33:09.513 [main] INFO  org.jsd.listeners.AllureReportListener - Allure generate exit code: 0
+2025-09-20 17:33:09.513 [main] INFO  org.jsd.listeners.AllureReportListener - Opening report at: E:\Work\jsd-framework\allure-report\index.html
+2025-09-20 17:33:09.524 [main] INFO  org.jsd.listeners.AllureReportListener - Static Allure report generated and opened successfully
+2025-09-20 17:33:14.475 [main] INFO  org.jsd.utils.EmailSender - Simple email sent successfully to: patiln31@gmail.com,nileshjsd@yopmail.com
+2025-09-20 17:35:04.517 [main] INFO  org.jsd.listeners.TestCleanupListener - Cleaning old test results before starting suite: Parallel Browser Suite
+2025-09-20 17:35:04.538 [main] INFO  org.jsd.listeners.TestCleanupListener - Cleaned allure-results directory for fresh reports
+2025-09-20 17:35:04.561 [main] INFO  org.jsd.listeners.TestCleanupListener - Cleaned allure-report directory
+2025-09-20 17:35:04.563 [main] INFO  org.jsd.listeners.TestCleanupListener - Cleaned screenshots directory
+2025-09-20 17:35:04.704 [TestNG-tests-1] INFO  org.jsd.utils.ConfigReader - Configuration loaded successfully from: /E:/Work/jsd-framework/target/test-classes/configs/config.properties
+2025-09-20 17:35:07.392 [TestNG-tests-1] INFO  org.jsd.base.BaseTest - Driver initialized successfully for browser: edge
+2025-09-20 17:35:07.541 [TestNG-tests-1] INFO  org.jsd.listeners.EnvironmentListener - Test started on OS: Windows 11 | Java: 21.0.5 | Environment: Local
+2025-09-20 17:35:18.867 [TestNG-tests-1] INFO  org.jsd.base.BaseTest - Driver closed successfully
+2025-09-20 17:35:18.876 [TestNG-tests-1] INFO  org.jsd.utils.CSVReader - Successfully read 4 rows from CSV file: /E:/Work/jsd-framework/target/test-classes/testdata/login_data.csv
+2025-09-20 17:35:20.196 [TestNG-tests-1] INFO  org.jsd.base.BaseTest - Driver initialized successfully for browser: edge
+2025-09-20 17:35:20.205 [TestNG-tests-1] INFO  org.jsd.listeners.EnvironmentListener - Test started on OS: Windows 11 | Java: 21.0.5 | Environment: Local
+2025-09-20 17:35:21.313 [TestNG-tests-1] INFO  org.jsd.utils.CommonActions - URL verified: https://www.saucedemo.com/v1/inventory.html
+2025-09-20 17:35:21.460 [TestNG-tests-1] INFO  org.jsd.base.BaseTest - Driver closed successfully
+2025-09-20 17:35:22.710 [TestNG-tests-1] INFO  org.jsd.base.BaseTest - Driver initialized successfully for browser: edge
+2025-09-20 17:35:22.715 [TestNG-tests-1] INFO  org.jsd.listeners.EnvironmentListener - Test started on OS: Windows 11 | Java: 21.0.5 | Environment: Local
+2025-09-20 17:35:23.671 [TestNG-tests-1] INFO  org.jsd.listeners.AllureReportListener - Test failed: testLoginWithMultipleUsers, capturing screenshot...
+2025-09-20 17:35:23.805 [TestNG-tests-1] ERROR io.qameta.allure.AllureLifecycle - Could not add attachment: no test is running
+2025-09-20 17:35:23.806 [TestNG-tests-1] INFO  org.jsd.listeners.AllureReportListener - Screenshot captured and attached to Allure report
+2025-09-20 17:35:23.908 [TestNG-tests-1] INFO  org.jsd.base.BaseTest - Driver closed successfully
+2025-09-20 17:35:25.233 [TestNG-tests-1] INFO  org.jsd.base.BaseTest - Driver initialized successfully for browser: edge
+2025-09-20 17:35:25.243 [TestNG-tests-1] INFO  org.jsd.listeners.EnvironmentListener - Test started on OS: Windows 11 | Java: 21.0.5 | Environment: Local
+2025-09-20 17:35:26.034 [TestNG-tests-1] INFO  org.jsd.utils.CommonActions - URL verified: https://www.saucedemo.com/v1/inventory.html
+2025-09-20 17:35:26.179 [TestNG-tests-1] INFO  org.jsd.base.BaseTest - Driver closed successfully
+2025-09-20 17:35:27.532 [TestNG-tests-1] INFO  org.jsd.base.BaseTest - Driver initialized successfully for browser: edge
+2025-09-20 17:35:27.538 [TestNG-tests-1] INFO  org.jsd.listeners.EnvironmentListener - Test started on OS: Windows 11 | Java: 21.0.5 | Environment: Local
+2025-09-20 17:35:28.272 [TestNG-tests-1] INFO  org.jsd.utils.CommonActions - Element is displayed: By.cssSelector: [data-test='error']
+2025-09-20 17:35:28.370 [TestNG-tests-1] INFO  org.jsd.base.BaseTest - Driver closed successfully
+2025-09-20 17:35:28.381 [main] INFO  org.jsd.listeners.AllureReportListener - Test suite 'Parallel Browser Suite' finished. Generating Allure report...
+2025-09-20 17:35:28.381 [main] INFO  org.jsd.listeners.AllureReportListener - Generating Allure report...
+2025-09-20 17:35:30.406 [main] INFO  org.jsd.listeners.AllureReportListener - Allure serve started - report will open in browser
+2025-09-20 17:35:34.796 [main] INFO  org.jsd.utils.EmailSender - Simple email sent successfully to: patiln31@gmail.com,nileshjsd@yopmail.com
