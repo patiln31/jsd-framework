@@ -3,7 +3,7 @@ cd /d "%~dp0"
 set ALLURE_HOME=%CD%\.allure\allure-2.24.0
 set PATH=%ALLURE_HOME%\bin;%PATH%
 
-mvn clean test -DsuiteXmlFile=testng.xml
+mvn clean test -DsuiteXmlFile=testng.xml -Dsurefire.suiteXmlFiles=
 
 if %ERRORLEVEL% EQU 0 (
     if exist "allure-report" rmdir /s /q "allure-report"

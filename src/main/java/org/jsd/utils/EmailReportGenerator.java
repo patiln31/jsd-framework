@@ -57,7 +57,7 @@ public class EmailReportGenerator {
                     .progress-section { padding: 0 40px 40px; }
                     .progress-label { font-size: 1.1rem; font-weight: 600; color: #1d1d1f; margin-bottom: 12px; text-align: center; }
                     .progress-bar { height: 8px; background: #f2f2f2; border-radius: 4px; overflow: hidden; position: relative; }
-                    .progress-fill { height: 100%%; background: linear-gradient(90deg, #34c759, #30d158); width: %.1f%%; border-radius: 4px; }
+                    .progress-fill { height: 100%%; background: linear-gradient(90deg, #34c759, #30d158); width: %s%%; border-radius: 4px; }
                     .info-section { padding: 40px; background: #fbfbfd; border-top: 1px solid #f2f2f2; }
                     .info-section h2 { font-size: 1.75rem; font-weight: 700; color: #1d1d1f; margin-bottom: 32px; text-align: center; letter-spacing: -0.022em; }
                     .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
@@ -164,7 +164,7 @@ public class EmailReportGenerator {
         String reportLink = "#"; // Placeholder, will be updated after saving
         
         String htmlContent = String.format(htmlTemplate, 
-            reportLink, successRate, totalTests, passed, failed, skipped, successRate,
+            reportLink, String.format("%.1f", successRate), totalTests, passed, failed, skipped, successRate,
             environment, browser, executionTime, successRate, 
             LocalDateTime.now().format(DateTimeFormatter.ofPattern("MMM dd, yyyy")),
             screenshotsSection);

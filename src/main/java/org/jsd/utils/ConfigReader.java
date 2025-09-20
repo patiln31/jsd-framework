@@ -30,7 +30,7 @@ public class ConfigReader {
         }
     }
 
-    public static String get(String key) {
+    public static String getProperty(String key) {
         String value = properties.getProperty(key);
         if (value == null) {
             log.warn("Configuration key not found: {}", key);
@@ -38,7 +38,7 @@ public class ConfigReader {
         return value;
     }
 
-    public static String get(String key, String defaultValue) {
+    public static String getProperty(String key, String defaultValue) {
         return properties.getProperty(key, defaultValue);
     }
 }

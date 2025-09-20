@@ -27,8 +27,8 @@ public class DriverFactory {
         WebDriver driver;
         
         // Check if remote execution is enabled
-        boolean isRemote = Boolean.parseBoolean(ConfigReader.get("remote", "false"));
-        String gridUrl = System.getProperty("grid.url", ConfigReader.get("grid.url"));
+        boolean isRemote = Boolean.parseBoolean(ConfigReader.getProperty("remote", "false"));
+        String gridUrl = System.getProperty("grid.url", ConfigReader.getProperty("grid.url"));
         
         if (isRemote && gridUrl != null) {
             // Remote execution on Grid

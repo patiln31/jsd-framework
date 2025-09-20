@@ -40,3 +40,37 @@ build/
 ### Allure Reports ###
 allure-results/
 allure-report/
+.allure/
+
+### Test Output & Logs ###
+test-output/
+*.log
+logs/
+surefire-reports/
+
+### Visual Testing ###
+test-output/visual-baselines/
+test-output/visual-actual/
+test-output/visual-diff/
+
+### Jenkins ###
+jenkins.war
+
+### Temporary Files ###
+*.tmp
+*.temp
+*~
+
+### OS Specific ###
+Thumbs.db
+*.swp
+*.swo
+
+### Security ###
+*.env
+.env.local
+credentials.properties
+
+### Dependencies ###
+node_modules/
+.mvn/wrapper/maven-wrapper.properties

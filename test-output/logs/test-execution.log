@@ -1,0 +1,30 @@
+2025-09-20 15:40:17.865 [main] INFO  org.jsd.listeners.TestCleanupListener - Cleaning old test results before starting suite: Parallel Browser Suite
+2025-09-20 15:40:17.966 [main] INFO  org.jsd.listeners.TestCleanupListener - Cleaned allure-results directory for fresh reports
+2025-09-20 15:40:17.979 [main] INFO  org.jsd.listeners.TestCleanupListener - Cleaned allure-report directory
+2025-09-20 15:40:17.981 [main] INFO  org.jsd.listeners.TestCleanupListener - Cleaned screenshots directory
+2025-09-20 15:40:18.087 [TestNG-tests-1] INFO  org.jsd.utils.ConfigReader - Configuration loaded successfully from: /E:/Work/jsd-framework/target/test-classes/configs/config.properties
+2025-09-20 15:40:22.123 [TestNG-tests-1] INFO  org.jsd.base.BaseTest - Driver initialized successfully for browser: chrome
+2025-09-20 15:40:22.313 [TestNG-tests-1] INFO  org.jsd.listeners.EnvironmentListener - Test started on OS: Windows 11 | Java: 21.0.5 | Environment: Local
+2025-09-20 15:40:33.652 [TestNG-tests-1] INFO  org.jsd.base.BaseTest - Driver closed successfully
+2025-09-20 15:40:33.662 [TestNG-tests-1] INFO  org.jsd.utils.CSVReader - Successfully read 4 rows from CSV file: /E:/Work/jsd-framework/target/test-classes/testdata/login_data.csv
+2025-09-20 15:40:34.605 [TestNG-tests-1] INFO  org.jsd.base.BaseTest - Driver initialized successfully for browser: chrome
+2025-09-20 15:40:34.770 [TestNG-tests-1] INFO  org.jsd.listeners.EnvironmentListener - Test started on OS: Windows 11 | Java: 21.0.5 | Environment: Local
+2025-09-20 15:40:35.964 [TestNG-tests-1] INFO  org.jsd.utils.CommonActions - URL verified: https://www.saucedemo.com/v1/inventory.html
+2025-09-20 15:40:36.064 [TestNG-tests-1] INFO  org.jsd.base.BaseTest - Driver closed successfully
+2025-09-20 15:40:36.955 [TestNG-tests-1] INFO  org.jsd.base.BaseTest - Driver initialized successfully for browser: chrome
+2025-09-20 15:40:36.963 [TestNG-tests-1] INFO  org.jsd.listeners.EnvironmentListener - Test started on OS: Windows 11 | Java: 21.0.5 | Environment: Local
+2025-09-20 15:40:37.874 [TestNG-tests-1] INFO  org.jsd.listeners.AllureReportListener - Test failed: testLoginWithMultipleUsers, capturing screenshot...
+2025-09-20 15:40:38.015 [TestNG-tests-1] INFO  org.jsd.listeners.AllureReportListener - Screenshot captured and attached to Allure report
+2025-09-20 15:40:38.163 [TestNG-tests-1] INFO  org.jsd.base.BaseTest - Driver closed successfully
+2025-09-20 15:40:39.171 [TestNG-tests-1] INFO  org.jsd.base.BaseTest - Driver initialized successfully for browser: chrome
+2025-09-20 15:40:39.176 [TestNG-tests-1] INFO  org.jsd.listeners.EnvironmentListener - Test started on OS: Windows 11 | Java: 21.0.5 | Environment: Local
+2025-09-20 15:40:40.331 [TestNG-tests-1] INFO  org.jsd.utils.CommonActions - URL verified: https://www.saucedemo.com/v1/inventory.html
+2025-09-20 15:40:40.495 [TestNG-tests-1] INFO  org.jsd.base.BaseTest - Driver closed successfully
+2025-09-20 15:40:42.173 [TestNG-tests-1] INFO  org.jsd.base.BaseTest - Driver initialized successfully for browser: chrome
+2025-09-20 15:40:42.179 [TestNG-tests-1] INFO  org.jsd.listeners.EnvironmentListener - Test started on OS: Windows 11 | Java: 21.0.5 | Environment: Local
+2025-09-20 15:40:42.740 [TestNG-tests-1] INFO  org.jsd.utils.CommonActions - Element is displayed: By.cssSelector: [data-test='error']
+2025-09-20 15:40:42.831 [TestNG-tests-1] INFO  org.jsd.base.BaseTest - Driver closed successfully
+2025-09-20 15:40:42.847 [main] INFO  org.jsd.listeners.AllureReportListener - Test suite 'Parallel Browser Suite' finished. Generating Allure report...
+2025-09-20 15:40:42.847 [main] INFO  org.jsd.listeners.AllureReportListener - Generating Allure report...
+2025-09-20 15:40:44.874 [main] INFO  org.jsd.listeners.AllureReportListener - Allure report served and opened
+2025-09-20 15:40:49.822 [main] INFO  org.jsd.utils.EmailSender - Simple email sent successfully to: patiln31@gmail.com,nileshjsd@yopmail.com

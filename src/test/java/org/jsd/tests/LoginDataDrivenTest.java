@@ -1,10 +1,14 @@
 package org.jsd.tests;
 
 import io.qameta.allure.*;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jsd.base.BaseTest;
 import org.jsd.pages.LoginPage;
 import org.jsd.utils.CSVReader;
 import org.jsd.utils.CommonActions;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import static org.testng.Assert.*;
@@ -12,6 +16,7 @@ import static org.testng.Assert.*;
 @Epic("Authentication")
 @Feature("Data Driven Login")
 public class LoginDataDrivenTest extends BaseTest {
+    private static final Logger log = LogManager.getLogger(LoginDataDrivenTest.class);
 
     @DataProvider(name = "loginData")
     public Object[][] getLoginData() {
@@ -41,19 +46,19 @@ public class LoginDataDrivenTest extends BaseTest {
                 Allure.step("Login successful - redirected to inventory page");
             }
             case "locked" -> {
-                // Deliberately failing this case to test screenshot capture functionality
-                // This will trigger the ScreenshotListener to capture and attach screenshot
                 assertTrue(loginPage.isErrorMessageDisplayed(),
                     "Error message should be displayed for locked user");
                 
-                // INTENTIONAL FAILURE: This assertion will fail to test screenshot capture
-                // Comment out the line below to make the test pass normally
+                // Capture screenshot before intentional failure
+                captureScreenshotForAllure("Before Intentional Failure");
+                
+                // INTENTIONAL FAILURE: Keep this to test screenshot capture functionality
                 assertFalse(loginPage.isErrorMessageDisplayed(), 
                     "INTENTIONAL FAILURE: Testing screenshot capture for locked user scenario");
                 
                 assertTrue(loginPage.getErrorMessage().contains("locked"),
                     "Error message should mention user is locked");
-                Allure.step("Login blocked - user account is locked (INTENTIONAL FAILURE FOR SCREENSHOT TEST)");
+                Allure.step("Login blocked - user account is locked");
             }
             case "error" -> {
                 actions.verifyElementDisplayed(org.openqa.selenium.By.cssSelector("[data-test='error']"));
@@ -61,4 +66,16 @@ public class LoginDataDrivenTest extends BaseTest {
             }
         }
     }
+    
+    @Attachment(value = "{screenshotName}", type = "image/png")
+    private byte[] captureScreenshotForAllure(String screenshotName) {
+        try {
+            byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+            return screenshot;
+        } catch (Exception e) {
+            log.error("Failed to capture screenshot: {}", e.getMessage());
+            return new byte[0];
+        }
+    }
+
 }

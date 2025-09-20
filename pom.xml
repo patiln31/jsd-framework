@@ -17,7 +17,7 @@
     <selenium.version>4.15.0</selenium.version>
     <testng.version>7.8.0</testng.version>
     <webdrivermanager.version>5.6.2</webdrivermanager.version>
-    <allure.version>2.24.0</allure.version>
+    <allure.version>2.29.0</allure.version>
     <log4j.version>2.22.0</log4j.version>
     <jackson.version>2.15.3</jackson.version>
     <aspectj.version>1.9.20.1</aspectj.version>
@@ -62,6 +62,13 @@
     <dependency>
       <groupId>org.apache.logging.log4j</groupId>
       <artifactId>log4j-api</artifactId>
+      <version>${log4j.version}</version>
+    </dependency>
+    
+    <!-- SLF4J to Log4j2 Bridge -->
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-slf4j-impl</artifactId>
       <version>${log4j.version}</version>
     </dependency>
 

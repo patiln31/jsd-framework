@@ -72,7 +72,7 @@ public class EmailReportListener implements ISuiteListener {
             totalTests, passed, failed, skipped);
         
         // Check if email notification is enabled
-        boolean emailEnabled = Boolean.parseBoolean(ConfigReader.get("email.notification.enabled", "false"));
+        boolean emailEnabled = Boolean.parseBoolean(ConfigReader.getProperty("email.notification.enabled", "false"));
         
         System.out.println("📧 EMAIL LISTENER: Email enabled = " + emailEnabled);
         if (emailEnabled) {

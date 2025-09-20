@@ -1,0 +1,3 @@
+org.jsd.listeners.SuiteEmailListener
+org.jsd.listeners.AllureReportListener
+org.jsd.listeners.RetryListener

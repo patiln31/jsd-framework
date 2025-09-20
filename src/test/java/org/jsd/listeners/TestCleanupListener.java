@@ -22,14 +22,14 @@ public class TestCleanupListener implements ISuiteListener {
     
     private void cleanOldResults() {
         try {
-            // Clean allure-results directory
+            // Clean allure-results directory for fresh reports
             Path allureResults = Paths.get("allure-results");
             if (Files.exists(allureResults)) {
                 Files.walk(allureResults)
                     .sorted(Comparator.reverseOrder())
                     .map(Path::toFile)
                     .forEach(File::delete);
-                log.info("Cleaned allure-results directory");
+                log.info("Cleaned allure-results directory for fresh reports");
             }
             
             // Clean allure-report directory
