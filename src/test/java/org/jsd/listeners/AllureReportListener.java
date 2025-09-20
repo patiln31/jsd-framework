@@ -134,12 +134,18 @@ public class AllureReportListener implements ISuiteListener, ITestListener {
         // Wait a moment for all results to be written
         Thread.sleep(2000);
         
-        // Use allure serve (single command that generates and opens)
-        ProcessBuilder serveBuilder = new ProcessBuilder();
-        serveBuilder.command("cmd", "/c", "start", "cmd", "/c", "allure serve " + ALLURE_RESULTS_PATH);
-        serveBuilder.start();
+        // Generate static report first
+        ProcessBuilder generateBuilder = new ProcessBuilder();
+        generateBuilder.command("cmd", "/c", "allure", "generate", ALLURE_RESULTS_PATH, "-o", "allure-report", "--clean");
+        Process generateProcess = generateBuilder.start();
+        generateProcess.waitFor();
         
-        log.info("Allure report served and opened");
+        // Open the static report in browser (won't close randomly)
+        ProcessBuilder openBuilder = new ProcessBuilder();
+        openBuilder.command("cmd", "/c", "start", "", "allure-report/index.html");
+        openBuilder.start();
+        
+        log.info("Static Allure report generated and opened");
     }
     
     private void openAllureReport() {
