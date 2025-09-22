@@ -2,7 +2,9 @@
 
 ## 🎥 Framework Demo Video
 
-<iframe src="https://player.vimeo.com/video/1120765938?badge=0&autopause=0&player_id=0&app_id=58479" width="800" height="450" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="JSD framework video"></iframe>
+[![JSD Framework Demo](https://vumbnail.com/1120765938.jpg)](https://vimeo.com/1120765938)
+
+**[▶️ Watch Full Demo on Vimeo](https://vimeo.com/1120765938)**
 
 ---
 
