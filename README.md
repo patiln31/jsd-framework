@@ -1,5 +1,11 @@
 # JSD Test Automation Framework
 
+## 🎥 Framework Demo Video
+
+<iframe src="https://player.vimeo.com/video/1120765938?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="800" height="450" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="JSD framework video"></iframe>
+
+---
+
 Test automation framework built with Selenium WebDriver, TestNG, Allure reporting, Docker Grid support, visual testing, and automatic screenshot capture on failures.
 
 ## 🚀 Tech Stack & Versions
